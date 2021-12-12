@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React course",
   "main": "index.js",
-  "author": "Ify",
+  "author": "Ify's app",
   "license": "MIT",
   "scripts": {
     "build:dev": "webpack",
