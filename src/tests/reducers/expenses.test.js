@@ -1,6 +1,6 @@
 import expensesReducer from '../../reducers/expenses';
 import expenses from '../fixtures/expenses';
-import uuid from 'uuid';
+// import uuid from 'uuid';
 
 test('should set default state', () => {
     const state = expensesReducer(undefined, { type: '@@INIT' });
@@ -48,4 +48,11 @@ test('should return expenses if no valid id', () => {
         updates: { note: 'I added something new' },
     });
     expect(value).toEqual(expenses);
+});
+test('Should set expenses', () => {
+    const state = expensesReducer(expenses, {
+        type: 'SET_EXPENSES',
+        expenses: [expenses[1]],
+    });
+    expect(state).toEqual([expenses[1]]);
 });

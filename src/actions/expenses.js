@@ -1,4 +1,4 @@
-import { push, ref } from 'firebase/database';
+import { push, ref, get, onValue } from 'firebase/database';
 import db from '../firebase/firebase';
 // import uuid from 'uuid';
 // what happens
@@ -34,6 +34,26 @@ export const startAddExpense = (expenseData = {}) => {
                     ...expense,
                 })
             );
+        });
+    };
+};
+// SET_EXPENSES
+export const setExpenses = (expenses) => ({
+    type: 'SET_EXPENSES',
+    expenses,
+});
+export const startSetExpenses = () => {
+    return (dispatch) => {
+        return get(ref(db, 'expenses')).then((snapshot) => {
+            const expenses = [];
+            snapshot.forEach((childSnapshot) => {
+                expenses.push({
+                    id: childSnapshot.key,
+                    ...childSnapshot.val(),
+                });
+            });
+            dispatch(setExpenses(expenses));
+            console.log(expenses);
         });
     };
 };
