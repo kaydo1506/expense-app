@@ -1,4 +1,4 @@
-import { push, ref, get, remove } from 'firebase/database';
+import { push, ref, get, remove, update } from 'firebase/database';
 import db from '../firebase/firebase';
 // import uuid from 'uuid';
 // what happens
@@ -77,3 +77,10 @@ export const editExpense = (id, updates) => ({
     id,
     updates,
 });
+export const startEditExpense = (id, updates) => {
+    return (dispatch) => {
+        return update(ref(db, `expenses/${id}`), updates).then(() => {
+            dispatch(editExpense(id, updates));
+        });
+    };
+};

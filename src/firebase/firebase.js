@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getDatabase, onValue, get, ref, set, remove } from 'firebase/database';
+import { getDatabase, onValue, get, ref, set, update } from 'firebase/database';
 
 const firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY,
@@ -47,6 +47,9 @@ const expenses = [
 //     push(ref(db, 'expenses'), e);
 // });
 // set(ref(db, 'test'), expenses);
+// update(ref(db, 'test/2'), {
+//     description: null,
+// });
 // remove(ref(db, `test/${id}`));
 // get(ref(db, 'expenses')).then((snapshot) => {
 //     const expenses = [];
