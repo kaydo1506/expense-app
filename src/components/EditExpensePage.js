@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
+import Header from './Header';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
 
 export class EditExpensePage extends React.Component {
@@ -16,6 +17,7 @@ export class EditExpensePage extends React.Component {
     render() {
         return (
             <div>
+                <Header />
                 <ExpenseForm expense={this.props.expense} onSubmit={this.onSubmit} />
                 <button onClick={this.onRemove}>Remove</button>
             </div>

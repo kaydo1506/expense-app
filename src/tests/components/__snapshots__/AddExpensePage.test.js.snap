@@ -2,6 +2,7 @@
 
 exports[`should render AddExpense page correctly 1`] = `
 <div>
+  <Header />
   <h1>
     Add expense
   </h1>
