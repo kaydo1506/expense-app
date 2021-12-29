@@ -1,7 +1,6 @@
-import { initializeApp } from 'firebase/app';
-import { getDatabase, onValue, get, ref, set, update } from 'firebase/database';
+import * as firebase from 'firebase';
 
-const firebaseConfig = {
+const config = {
     apiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
     databaseURL: process.env.FIREBASE_DATABASE_URL,
@@ -11,64 +10,32 @@ const firebaseConfig = {
     appId: process.env.FIREBASE_APP_ID,
     measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 };
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
-export { db as default };
 
-// onChildRemoved(ref(db, 'expenses'), (snapshot) => {
-//     console.log(snapshot.key, snapshot.val());
-// });
-// onChildChanged(ref(db, 'expenses'), (snapshot) => {
-//     console.log(snapshot.key, snapshot.val());
-// });
+firebase.initializeApp(config);
 
-const expenses = [
-    {
-        description: 'Item 1',
-        note: 'Some note',
-        amount: 1000,
-        createdAt: 120,
-    },
-    {
-        description: 'Item 2',
-        note: 'Another note',
-        amount: 1001,
-        createdAt: 120,
-    },
-    {
-        description: 'Item 3 ',
-        note: 'Yet another note',
-        amount: 1020,
-        createdAt: 120,
-    },
-];
+const database = firebase.database();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-// expenses.map((e) => {
-//     push(ref(db, 'expenses'), e);
-// });
-// set(ref(db, 'test'), expenses);
-// update(ref(db, 'test/2'), {
-//     description: null,
-// });
-// remove(ref(db, `test/${id}`));
-// get(ref(db, 'expenses')).then((snapshot) => {
-//     const expenses = [];
-//     snapshot.forEach((childSnapshot) => {
-//         expenses.push({
-//             id: childSnapshot.key,
-//             ...childSnapshot.val(),
-//         });
+export { firebase, googleAuthProvider, database as default };
+
+// database
+//     .ref('something')
+//     .set({
+//         name: 'Andrew Mead',
+//         age: 26,
+//         stressLevel: 6,
+//         job: {
+//             title: 'Software developer',
+//             company: 'Google',
+//         },
+//         location: {
+//             city: 'Philadelphia',
+//             country: 'United States',
+//         },
+//     })
+//     .then(() => {
+//         console.log('Data is saved!');
+//     })
+//     .catch((e) => {
+//         console.log('This failed.', e);
 //     });
-//     console.log(expenses);
-// });
-
-// onValue(ref(db, 'expenses'), (snapshot) => {
-//     const expenses = [];
-//     snapshot.forEach((childSnapshot) => {
-//         expenses.push({
-//             id: childSnapshot.key,
-//             ...childSnapshot.val(),
-//         });
-//     });
-//     console.log(expenses);
-// });

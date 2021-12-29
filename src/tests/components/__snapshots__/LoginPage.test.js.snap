@@ -1,10 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render LoginPage 1`] = `
+exports[`should correctly render LoginPage 1`] = `
 <div>
-  <button
-    onClick={[Function]}
-  >
+  <button>
     Login
   </button>
 </div>

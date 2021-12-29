@@ -2,7 +2,6 @@
 
 exports[`should render EditExpense page 1`] = `
 <div>
-  <Header />
   <ExpenseForm
     expense={
       Object {
