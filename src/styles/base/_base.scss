@@ -2,9 +2,10 @@ html{
     font-size: 62.5%;
 }
 body {
-    font-family: helvetica, Arial, sans-serif;
+    color: $dark-grey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.6rem;
-    background-color: rgb(255, 174, 0);
+    line-height: 1.6;
 }
 button{
     cursor: pointer;

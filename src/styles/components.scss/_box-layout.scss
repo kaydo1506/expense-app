@@ -1,0 +1,33 @@
+.box-layout{
+    // background: url('/images/bg.jpg');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52) 0%,rgba(0, 0, 0, 0.692) 100%), url('/images/bg.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+  
+    &__box {
+        background: fade-out(white, .50);
+        text-align: center;
+        width: 28rem;
+        padding: $l-size $m-size;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+
+    }
+    &__title {
+        margin: 0 0 $m-size 0;
+        line-height: 1;
+    }
+    p{
+        font-family: serif;
+    }
+}
+
+ 

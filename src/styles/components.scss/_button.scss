@@ -1,0 +1,21 @@
+.button {
+    padding: $s-size;
+    background: $blue;
+    color: white;
+    border: none;
+    font-weight: 400;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1;
+    font-size: $font-size-large;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    
+    &--link {
+        background: none;
+    }
+}
+
