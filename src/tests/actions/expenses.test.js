@@ -172,3 +172,4 @@ test('should fetch the expenses from firebase', (done) => {
         done();
     });
 });
+
