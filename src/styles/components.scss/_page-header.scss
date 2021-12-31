@@ -12,6 +12,9 @@
       span {
         font-weight: 700;
       }
+      @media(max-width: $desktop-breakpoint){
+        font-size: 22px;
+      }
     }
 }
   
