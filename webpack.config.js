@@ -22,7 +22,7 @@ module.exports = (env) => {
     const CSSExtract = new ExtractTextPlugin('styles.css');
 
     return {
-        entry: './src/app.js',
+        entry: ['babel-polyfill', './src/app.js'],
         output: {
             // this should be the absolute path on your machine + the output file (/public)
             path: path.join(__dirname, 'public', 'dist'),
