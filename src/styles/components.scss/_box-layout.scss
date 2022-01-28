@@ -1,6 +1,6 @@
 .box-layout{
     // background: url('/images/bg.jpg');
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.411) 0%,rgba(44, 43, 43, 0.692) 100%), url('/images/bg.jpg');
+    background: whitesmoke;
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -10,7 +10,8 @@
 
   
     &__box {
-        background: fade-out(white, .40);
+        // background: fade-out(white, .40);
+        border: 1px solid $dark-blue;
         text-align: center;
         width: 28rem;
         padding: $l-size $m-size;
