@@ -1,6 +1,6 @@
 .box-layout{
-    // background: url('/images/bg.jpg');
-    background: whitesmoke;
+    // background: url('/images/bg.jpeg');
+
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -10,7 +10,7 @@
 
   
     &__box {
-        // background: fade-out(white, .40);
+        background: burlywood;
         border: 1px solid $dark-blue;
         text-align: center;
         width: 28rem;
