@@ -1,5 +1,9 @@
 .box-layout{
-    // background: url('/images/bg.jpeg');
+     background: linear-gradient(
+      rgba(248, 235, 230, 0.742),
+      rgba(236, 224, 220, 0.836)
+    ),
+    url('/images/bg.jpeg');
 
     background-size: cover;
     height: 100vh;
