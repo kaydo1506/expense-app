@@ -10,6 +10,12 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
+  background: linear-gradient(
+      rgba(218, 216, 216, 0.742),
+      rgba(137, 136, 136, 0.836)
+    ),
+    url('/images/bg.jpeg');
+    height: fit-content;
 }
 @media screen and (max-width: 1010px) {
   body {

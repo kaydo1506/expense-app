@@ -1,18 +1,11 @@
 .content-container {
   margin: 0 auto;
   max-width: 100rem;
-  // padding: 0 $m-size;
+  padding: 0 $m-size;
 }
 @media screen and (max-width: 1010px) {
   .content-container {
     padding: 0px 15px;
   }
 }
-.dashboard {
-  height: 100vh;
-  background: linear-gradient(
-      rgba(218, 216, 216, 0.742),
-      rgba(137, 136, 136, 0.836)
-    ),
-    url('/images/bg.jpeg');
-}
+
